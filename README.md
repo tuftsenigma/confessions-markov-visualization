@@ -6,6 +6,6 @@
 
 ---
 
-**Read more at: http://tuftsenigma.org**
+**Read more at: http://tuftstrends.org**
 
 ![alt text] (https://avatars3.githubusercontent.com/u/11640582?v=3&s=200 "Tufts Enigma")
