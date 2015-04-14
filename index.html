@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
-<div id="tooltip" style="font: 15px 'Roboto Condensed'; color: white; opacity: .8; background: black; padding: 15px; border-radius: 20px; position: absolute; z-index: 10; visibility: hidden; white-space: nowrap; pointer-events: none;"></div>
+<div id="tooltip" style="font: 15px 'Roboto Condensed'; color: white; opacity: .8; top: 85px; left: 190px; background: black; padding: 15px; border-radius: 20px; position: absolute; z-index: 10; visibility: hidden; white-space: nowrap; pointer-events: none;"></div>
 <div id="markovv"></div>
 
 <script>
@@ -52,20 +52,20 @@ function drawChords (matrix, mmap, owes) {
       .attr("height", h)
     .append("svg:g")
       .attr("id", "circle")
-      .attr("transform", "translate(" + w/3 + "," + 6*h / 11 + ")");
+      .attr("transform", "translate(" + w/3 + "," + 7*h / 11 + ")");
       svg.append("circle")
           .attr("r", r0 + 20);
 
     // title
   svg.append("text")
         .attr("x", -220)             
-        .attr("y", -325)
+        .attr("y", -365)
         .style("font-size", "20px") 
         .text("How Topics Change within Confessions");
 
   svg.append("text")
         .attr("x", -220)             
-        .attr("y", -302)
+        .attr("y", -342)
         .style("font-size", "16px")
         .attr("fill", "#989898")
         .text("Markov model of topic transitions in confessions (hover over chords)");
@@ -112,8 +112,6 @@ function drawChords (matrix, mmap, owes) {
             d3.select("#tooltip")
               .style("visibility", "visible")
               .html(chordTip(rdr(d)))
-              .style("top", function () { return (d3.event.pageY - 100)+"px"})
-              .style("left", function () { return (d3.event.pageX - 100)+"px";})
           })
           .on("mouseout", function (d) { d3.select("#tooltip").style("visibility", "hidden") });
 
