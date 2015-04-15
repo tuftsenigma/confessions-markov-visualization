@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
-<div id="tooltip" style="font: 15px 'Roboto Condensed'; color: white; opacity: .8; top: 85px; left: 190px; background: black; padding: 15px; border-radius: 20px; position: absolute; z-index: 10; visibility: hidden; white-space: nowrap; pointer-events: none;"></div>
+<div id="tooltip" style="font: 15px 'Roboto Condensed'; color: white; opacity: .8; top: 355px; left: 150px; background: black; padding: 15px; border-radius: 20px; position: absolute; z-index: 10; visibility: hidden; white-space: nowrap; pointer-events: none;"></div>
 
 <div id="markovv"></div>
 
@@ -29,10 +29,10 @@ d3.csv('topic_markov.csv', function (error, data) {
 
 /* generate chord diagram */
 function drawChords (matrix, mmap, owes) {
-  var w = 780, 
+  var w = 900, 
       h = 630, 
       r1 = 350, 
-      r0 = r1 - 170;
+      r0 = r1 - 130;
 
   var fill = d3.scale.ordinal()
       .domain([0, 1, 2])
