@@ -30,7 +30,7 @@ d3.csv('topic_markov.csv', function (error, data) {
 /* generate chord diagram */
 function drawChords (matrix, mmap, owes) {
   var w = 900, 
-      h = 630, 
+      h = 750, 
       r1 = 350, 
       r0 = r1 - 130;
 
@@ -53,7 +53,7 @@ function drawChords (matrix, mmap, owes) {
       .attr("height", h)
     .append("svg:g")
       .attr("id", "circle")
-      .attr("transform", "translate(" + w/3 + "," + 7*h / 11 + ")");
+      .attr("transform", "translate(" + w/3 + "," + 6*h / 11 + ")");
       svg.append("circle")
           .attr("r", r0 + 20);
 
